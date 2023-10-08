@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="868c3940-1252-4b96-8c6e-b89b7678284f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/daoying/client/ClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/daoying/client/ClientType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/daoying/client/DataSourceClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/daoying/client/DataSourceClientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/daoying/client/DataSourceClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/daoying/client/DataSourceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/daoying/client/MysqlClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/daoying/client/MysqlDataSourceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/test/java/com/daoying/client/MysqlClientServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/daoying/client/DataSourceConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/daoying/client/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/daoying/client/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/daoying/client/DataSourceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/daoying/client/DataSourceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/daoying/client/DataSourceClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/daoying/client/DataSourceDataSourceConfigRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/daoying/client/DataSourceClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/daoying/client/DataSourceConfigService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/daoying/client/DataSourceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/daoying/client/MysqlClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/daoying/client/MysqlClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/daoying/client/MysqlDataSourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/daoying/client/MysqlDataSourceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/test/java/com/daoying/client/MysqlClientServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/com/daoying/client/MysqlClientServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +207,7 @@
       <updated>1696745911862</updated>
       <workItem from="1696745912890" duration="5840000" />
       <workItem from="1696753409138" duration="711000" />
-      <workItem from="1696755344774" duration="3996000" />
+      <workItem from="1696755344774" duration="5068000" />
     </task>
     <task id="LOCAL-00001" summary="初始化项目">
       <option name="closed" value="true" />
@@ -242,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696756009291</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="增加数据库连接">
+      <option name="closed" value="true" />
+      <created>1696759907255</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696759907255</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,17 +272,7 @@
     <MESSAGE value="删除多余文件" />
     <MESSAGE value="初始化项目" />
     <MESSAGE value="添加idea配置文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加idea配置文件" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/server/src/test/java/com/daoying/client/MysqlClientServiceTest.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="增加数据库连接" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加数据库连接" />
   </component>
 </project>

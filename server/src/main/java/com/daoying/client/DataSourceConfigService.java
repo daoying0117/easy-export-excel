@@ -11,9 +11,9 @@ import javax.sql.DataSource;
  */
 
 @Service
-public class DataSourceClientService {
+public class DataSourceConfigService {
 
-    public DataSource buildDataSource(DataSourceClient dataSourceClient){
+    public DataSource buildDataSource(DataSourceConfig dataSourceClient){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setUrl(dataSourceClient.getAddr());
         dataSource.setUsername(dataSourceClient.getUsername());

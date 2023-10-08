@@ -18,24 +18,24 @@ import java.util.Optional;
 @Service
 public class MysqlClientService implements ClientService {
 
-    private final DataSourceClientService dataSourceClientService;
+    private final DataSourceConfigService dataSourceClientService;
 
     private final JdbcTemplate jdbcTemplate;
 
     @Override
-    public boolean testClient(DataSourceClient client) {
+    public boolean testClient(DataSourceConfig client) {
         return false;
     }
 
     @Override
-    public Optional<DataSourceService> buildClient(DataSourceClient client) {
+    public Optional<DataSourceClient> buildClient(DataSourceConfig client) {
         DataSource dataSource = dataSourceClientService.buildDataSource(client);
         jdbcTemplate.setDataSource(dataSource);
-        return Optional.of(new MysqlDataSourceService(jdbcTemplate));
+        return Optional.of(new MysqlDataSourceClient(jdbcTemplate));
     }
 
     @Override
-    public Optional<List<JSONObject>> execute(DataSourceService client, String sql) {
+    public Optional<List<JSONObject>> execute(DataSourceClient client, String sql) {
         return Optional.empty();
     }
 }

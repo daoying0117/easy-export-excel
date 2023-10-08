@@ -15,18 +15,18 @@ class MysqlClientServiceTest {
 
     @Test
     public void testBuildClient(){
-        DataSourceClient sourceClient = DataSourceClient.builder()
+        DataSourceConfig sourceClient = DataSourceConfig.builder()
                 .addr("jdbc:mysql://82.156.27.61:3306/easy_export_excel")
                 .username("root")
                 .password("daoying").build();
 
-        Optional<DataSourceService> service = mysqlClientService.buildClient(sourceClient);
+        Optional<DataSourceClient> service = mysqlClientService.buildClient(sourceClient);
 
         if (service.isPresent()){
-            DataSourceService client = service.get();
+            DataSourceClient client = service.get();
 
-            if (client instanceof MysqlDataSourceService){
-                JdbcTemplate jdbcTemplate = ((MysqlDataSourceService) client).getJdbcTemplate();
+            if (client instanceof MysqlDataSourceClient){
+                JdbcTemplate jdbcTemplate = ((MysqlDataSourceClient) client).getJdbcTemplate();
                 jdbcTemplate.query("select  * from sys_user",r -> {
                     String string = r.getString(1);
                 });

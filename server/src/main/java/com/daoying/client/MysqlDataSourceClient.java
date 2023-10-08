@@ -12,7 +12,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 @Getter
 @AllArgsConstructor
-public class MysqlDataSourceService implements DataSourceService {
+public class MysqlDataSourceClient implements DataSourceClient {
 
     private JdbcTemplate jdbcTemplate;
 }

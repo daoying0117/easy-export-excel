@@ -16,14 +16,14 @@ public interface ClientService {
      * @param client 数据源连接配置
      * @return bool
      */
-    boolean testClient(DataSourceClient client);
+    boolean testClient(DataSourceConfig client);
 
     /**
      * 构建数据源连接
      * @param client 数据源连接配置
      * @return Optional
      */
-    Optional<DataSourceService> buildClient(DataSourceClient client);
+    Optional<DataSourceClient> buildClient(DataSourceConfig client);
 
     /**
      * 执行SQL
@@ -31,5 +31,5 @@ public interface ClientService {
      * @param sql sql语句
      * @return Optional
      */
-    Optional<List<JSONObject>> execute(DataSourceService client, String sql);
+    Optional<List<JSONObject>> execute(DataSourceClient client, String sql);
 }

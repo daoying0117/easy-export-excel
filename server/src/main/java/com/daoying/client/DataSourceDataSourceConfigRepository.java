@@ -1,6 +1,5 @@
 package com.daoying.client;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
@@ -10,7 +9,7 @@ import org.springframework.stereotype.Repository;
  * @author daoying
  */
 @Repository
-public interface DataSourceClientRepository
-        extends JpaRepository<DataSourceClient,Integer>,
-        CrudRepository<DataSourceClient,Integer> {
+public interface DataSourceDataSourceConfigRepository
+        extends JpaRepository<DataSourceConfig,Integer>,
+        CrudRepository<DataSourceConfig,Integer> {
 }
