@@ -2,6 +2,7 @@ package com.daoying.client;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 /**
@@ -12,7 +13,14 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 @Getter
 @AllArgsConstructor
+@RequiredArgsConstructor
 public class MysqlDataSourceClient implements DataSourceClient {
 
     private JdbcTemplate jdbcTemplate;
+
+    private String database;
+
+    public MysqlDataSourceClient(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
 }

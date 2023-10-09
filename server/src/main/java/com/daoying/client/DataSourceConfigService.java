@@ -1,5 +1,6 @@
 package com.daoying.client;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.stereotype.Service;
 
@@ -11,14 +12,9 @@ import javax.sql.DataSource;
  */
 
 @Service
+@RequiredArgsConstructor
 public class DataSourceConfigService {
 
-    public DataSource buildDataSource(DataSourceConfig dataSourceClient){
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setUrl(dataSourceClient.getAddr());
-        dataSource.setUsername(dataSourceClient.getUsername());
-        dataSource.setPassword(dataSourceClient.getPassword());
-        return dataSource;
-    }
+    private final ClientService clientService;
 
 }
