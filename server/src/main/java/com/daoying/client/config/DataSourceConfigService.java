@@ -1,10 +1,8 @@
-package com.daoying.client;
+package com.daoying.client.config;
 
+import com.daoying.client.ClientService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.stereotype.Service;
-
-import javax.sql.DataSource;
 
 /**
  * 数据源连接 Service

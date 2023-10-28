@@ -1,4 +1,4 @@
-package com.daoying.client;
+package com.daoying.client.config;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;

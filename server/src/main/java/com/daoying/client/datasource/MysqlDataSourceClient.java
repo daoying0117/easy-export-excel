@@ -1,4 +1,4 @@
-package com.daoying.client;
+package com.daoying.client.datasource;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,5 +1,6 @@
-package com.daoying.client;
+package com.daoying.client.config;
 
+import com.daoying.client.ClientType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

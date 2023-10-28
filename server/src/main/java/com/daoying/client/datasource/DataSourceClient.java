@@ -1,4 +1,4 @@
-package com.daoying.client;
+package com.daoying.client.datasource;
 
 /**
  * @author daoying

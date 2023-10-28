@@ -1,5 +1,8 @@
 package com.daoying.client;
 
+import com.daoying.client.datasource.DataSourceClient;
+import com.daoying.client.datasource.MysqlDataSourceClient;
+import com.daoying.client.config.DataSourceConfig;
 import com.daoying.dsl.CommonSql;
 import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;

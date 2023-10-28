@@ -12,9 +12,14 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public enum ClientType {
 
-
+    /**
+     * ES
+     */
     ES("elasticsearch"),
 
+    /**
+     * MYSQL
+     */
     MYSQL("mysql");
 
     private final String type;
