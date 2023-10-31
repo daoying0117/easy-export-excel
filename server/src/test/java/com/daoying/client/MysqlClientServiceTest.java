@@ -1,5 +1,6 @@
 package com.daoying.client;
 
+import com.alibaba.fastjson.JSONObject;
 import com.daoying.client.datasource.DataSourceClient;
 import com.daoying.client.datasource.MysqlDataSourceClient;
 import com.daoying.client.config.DataSourceConfig;
@@ -20,6 +21,8 @@ class MysqlClientServiceTest {
     @Resource
     private  MysqlClientService mysqlClientService;
 
+    private static final String TEST_DATABASE = "easy_export_excel";
+
     private DataSourceConfig buildTestConfig(){
         return DataSourceConfig.builder()
                 .addr("82.156.27.61")
@@ -27,6 +30,7 @@ class MysqlClientServiceTest {
                 .username("root")
                 .password("daoying").build();
     }
+
 
     private DataSourceConfig buildBadTestConfig(){
         return DataSourceConfig.builder()
@@ -75,6 +79,23 @@ class MysqlClientServiceTest {
             Optional<Set<String>> indexes = mysqlClientService.getIndexes(dataSourceClient.get());
             System.out.println(indexes);
         }
+    }
+
+    @Test
+    public void testExecute(){
+        DataSourceConfig sourceClient = buildTestConfig();
+        Optional<DataSourceClient> dataSourceClient = mysqlClientService.buildClient(sourceClient,TEST_DATABASE);
+        if (dataSourceClient.isPresent()){
+            Optional<List<JSONObject>> dataSource = mysqlClientService.execute(
+                    dataSourceClient.get(),
+                    "select * from sys_token;"
+            );
+
+            if (dataSource.isPresent()){
+                System.out.println(dataSource.get());
+            }
+        }
+
     }
 
 }

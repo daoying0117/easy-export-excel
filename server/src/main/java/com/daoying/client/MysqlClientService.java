@@ -9,11 +9,15 @@ import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import javax.sql.DataSource;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -115,6 +119,27 @@ public class MysqlClientService implements ClientService {
 
     @Override
     public Optional<List<JSONObject>> execute(DataSourceClient client, String dsl) {
+
+         //判断client的类型
+         if (client instanceof MysqlDataSourceClient){
+             var dataList = ((MysqlDataSourceClient) client)
+                     .getJdbcTemplate()
+                     .query(dsl, (rs, rowNum) -> {
+                         final var obj = new JSONObject();
+                         ResultSetMetaData metaData = rs.getMetaData();
+                         var columnCount = metaData.getColumnCount();
+                         for (int i = 1; i <= columnCount; i++) {
+                            var columnName = metaData.getColumnName(i);
+                            obj.put(columnName,rs.getObject(columnName));
+                         }
+                         return obj;
+                     }
+             );
+
+             return Optional.of(dataList);
+         }else {
+             log.warn("数据库连接异常Class: {}",client.getClass());
+         }
         return Optional.empty();
     }
 

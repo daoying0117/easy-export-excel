@@ -46,7 +46,7 @@ public interface ClientService {
     String buildClientAddr(DataSourceConfig config);
 
     /**
-     * 执行DSL
+     * 执行DSL(暂时只支持查询语句)
      * @param client 数据源连接配置
      * @param dsl sql语句
      * @return Optional
