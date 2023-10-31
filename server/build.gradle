@@ -40,6 +40,9 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
+
+    //jsqlparser
+    implementation 'com.github.jsqlparser:jsqlparser:4.7'
 }
 
 tasks.named('test') {
