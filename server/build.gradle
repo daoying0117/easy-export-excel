@@ -43,6 +43,10 @@ dependencies {
 
     //jsqlparser
     implementation 'com.github.jsqlparser:jsqlparser:4.7'
+
+    //easyexcel
+    implementation group: 'com.alibaba', name: 'easyexcel', version: '3.3.2'
+
 }
 
 tasks.named('test') {
